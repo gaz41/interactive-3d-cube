@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-1.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>3D interactive cube</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>3D interactive cube</h1>
+      </header>
+
+      <main>
+        <div class="scene">
+          <div class="cube">
+            <div class="cube__face cube__face--front">front</div>
+            <div class="cube__face cube__face--right">right</div>
+            <div class="cube__face cube__face--top">top</div>
+            <div class="cube__face cube__face--back">back</div>
+            <div class="cube__face cube__face--left">left</div>
+            <div class="cube__face cube__face--bottom">bottom</div>
+          </div>
+        </div>
+        <p class="radio-group">
+          <label class="btn">
+            <input type="radio" name="rotate-cube-side" value="front" checked />
+            front
+          </label>
+          <label class="btn">
+            <input type="radio" name="rotate-cube-side" value="right" />
+            right
+          </label>
+          <label class="btn">
+            <input type="radio" name="rotate-cube-side" value="left" />
+            left
+          </label>
+          <label class="btn">
+            <input type="radio" name="rotate-cube-side" value="back" />
+            back
+          </label>
+          <label class="btn">
+            <input type="radio" name="rotate-cube-side" value="top" />
+            top
+          </label>
+          <label class="btn">
+            <input type="radio" name="rotate-cube-side" value="bottom" />
+            bottom
+          </label>
+        </p>
+
+        <div class="opacityContainer">
+          <!-- toggle switch for opacity -->
+          <label for="toggleInput" class="opacityText">cube opacity</label>
+          <div class="toggleInput">
+            <label for="toggleswitch" class="switch">
+              <input type="checkbox" id="toggleswitch" />
+              <span class="slider2"></span>
+            </label>
+            <div id="status"></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- copyright info -->
+      <footer>
+        <div id="copy" class="copy"></div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- inspired by: -->
+<!-- https://codepen.io/desandro/pen/KRWjzm -->
+
+<!-- 
+interactive 3D cube implemented using HTML and JavaScript.
+The cube can be rotated to display different faces based on user input, and its opacity can be toggled for visual effects.
+-->
